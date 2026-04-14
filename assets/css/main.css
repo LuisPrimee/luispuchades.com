@@ -3947,45 +3947,87 @@ input, select, textarea {
 
 /* Footer */
 
+
+#footer {
+	background-color: #f5f5f5;
+	color: #717981;
+	width: 100%;
+	max-width: 72rem;
+	margin: 0 auto;
+	padding: 4rem 6rem;
+	position: relative;
+	z-index: 2;
+	display: block;
+}
+
+/* CONTENEDOR PRINCIPAL */
 .footer-row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4rem 6rem;
 	width: 100%;
+	gap: 40px;
 }
 
-.footer-left p,
+/* TEXTO IZQUIERDA */
 .footer-left h3 {
 	margin: 0;
+	font-size: 0.8rem;
+	color: #717981;
 }
 
+.footer-left p {
+	margin: 0;
+	font-size: 0.8rem;
+	color: #717981;
+}
+
+/* ICONOS DERECHA */
 .footer-right ul {
 	display: flex;
 	gap: 16px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	justify-content: flex-end;
+	align-items: center;
 }
 
+/* LINKS */
+#footer a {
+	color: #717981;
+	border-bottom: none;
+}
 
-	#copyright {
-		color: #ffffff;
-		position: relative;
-		color: rgba(255, 255, 255, 0.25);
-		cursor: default;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 0.8rem;
-		font-weight: 900;
-		letter-spacing: 0.075em;
-		line-height: 1.5;
-		text-align: center;
-		text-transform: uppercase;
-		margin: 4rem auto 8rem auto;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
-		z-index: 2;
+#footer a:hover {
+	color: #18bfef !important;
+}
+
+/* ICONOS (estilo original limpio) */
+#footer ul.icons.alt li .icon:before {
+	box-shadow: inset 0 0 0 2px #e2e2e2;
+}
+
+#footer ul.icons.alt li a.icon:hover:before {
+	box-shadow: inset 0 0 0 2px #18bfef;
+}
+
+/* BLOQUEO DE ESTRUCTURA VIEJA DE PLANTILLA */
+#footer > section,
+#footer .split,
+#footer .contact {
+	display: none !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 736px) {
+	.footer-row {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 2rem;
 	}
+}
 
 		#copyright input, #copyright select, #copyright textarea {
 			color: #ffffff;
