@@ -4104,3 +4104,12 @@ body #wrapper #footer * {
     position: relative;
     z-index: 2;
 }
+
+		#intro {
+    background-image: none !important;
+    background: #000000 !important; /* negro de fallback mientras carga el vídeo */
+}
+
+#wrapper {
+    background-image: none !important;
+}
