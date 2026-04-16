@@ -3431,7 +3431,60 @@ body:not(.is-preload) #nav {
 	}
 }
 
+ /* =========================
+   VIDEO BACKGROUND INTRO
+========================= */
 
+#intro {
+	position: relative;
+	overflow: hidden;
+}
+
+/* VIDEO */
+#bg-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+	pointer-events: none;
+	transform: scale(1.02);
+}
+
+/* OSCURECER PARA LEGIBILIDAD */
+.intro-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.35);
+	z-index: 1;
+}
+
+/* CONTENIDO ENCIMA DEL VÍDEO */
+#intro h1,
+#intro p,
+#intro .actions {
+	position: relative;
+	z-index: 2;
+}
+
+/* OPCIONAL: mejora estética del texto */
+#intro h1 {
+	letter-spacing: 0.02em;
+}
+
+#intro p {
+	opacity: 0.9;
+}
+
+/* FLECHA MÁS SEPARADA DEL TEXTO */
+#intro .actions {
+	margin-top: 3rem;
+}
 /* =========================
    HEADER LIMPIO
 ========================= */
