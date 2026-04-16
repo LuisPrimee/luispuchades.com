@@ -72,6 +72,22 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* =========================
+   NAV SCROLL BEHAVIOR
+========================= */
+
+body.is-preload #nav {
+	transform: translateY(2rem);
+	opacity: 0;
+	pointer-events: none;
+}
+
+body:not(.is-preload) #nav {
+	transform: translateY(0);
+	opacity: 1;
+	pointer-events: auto;
+}
+
 /* Basic */
 
 	@-ms-viewport {
