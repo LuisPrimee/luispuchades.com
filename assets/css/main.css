@@ -3307,7 +3307,7 @@ body:not(.is-preload) #nav {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	text-align: center;
 	position: relative;
 	z-index: 1;
