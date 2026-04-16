@@ -3328,6 +3328,36 @@ body:not(.is-preload) #nav {
 			display: none !important; /* Eliminamos el granulado que ensucia el video */
 		}
 
+#bg-video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		z-index: 0;
+		object-fit: cover;
+	}
+
+	.intro-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 1;
+	}
+
+	#intro > h1, 
+	#intro > p, 
+	#intro > .actions {
+		position: relative;
+		z-index: 2; /* Texto por encima del video */
+	}
+
 /* TEXTOS */
 #intro h1 {
 	font-size: 5rem;
