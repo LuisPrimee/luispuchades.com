@@ -3490,118 +3490,81 @@ input, select, textarea {
 
 		}
 
-/* Header */
 
+/* =========================
+   HEADER LIMPIO
+========================= */
+
+#header {
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-end;
+	pointer-events: none;
+	user-select: none;
+	height: 20rem;
+	padding-bottom: 6rem;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+/* ELEMENTOS */
+#header input,
+#header select,
+#header textarea {
+	color: #ffffff;
+}
+
+#header a {
+	color: #ffffff;
+	border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+#header a:hover {
+	border-bottom-color: transparent;
+	color: #18bfef !important;
+}
+
+#header strong,
+#header b,
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header h6 {
+	color: #ffffff;
+}
+
+/* LOGO (LP) */
+#header .logo {
+	display: none !important; /* elimina el LP completamente */
+}
+
+/* ANIMACIONES DE PLANTILLA DESACTIVADAS */
+#intro + #header,
+#intro.hidden + #header .logo,
+body.is-preload #intro:not(.hidden) + #header + #nav {
+	transform: none !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 980px) {
 	#header {
-		color: #ffffff;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: -moz-flex-end;
-		-webkit-justify-content: -webkit-flex-end;
-		-ms-justify-content: -ms-flex-end;
-		justify-content: flex-end;
-		pointer-events: none;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		height: 20rem;
-		padding-bottom: 8rem;
-		position: relative;
-		text-align: center;
-		z-index: 2;
+		height: 14rem;
+		padding-bottom: 4rem;
 	}
+}
 
-		#header input, #header select, #header textarea {
-			color: #ffffff;
-		}
-
-		#header a {
-			color: #ffffff;
-			border-bottom-color: rgba(255, 255, 255, 0.5);
-		}
-
-			#header a:hover {
-				border-bottom-color: transparent;
-				color: #18bfef !important;
-			}
-
-		#header strong, #header b {
-			color: #ffffff;
-		}
-
-		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
-		}
-
-		#header blockquote {
-			border-left-color: #ffffff;
-		}
-
-		#header code {
-			background: rgba(255, 255, 255, 0.075);
-			border-color: #ffffff;
-		}
-
-		#header hr {
-			border-bottom-color: #ffffff;
-		}
-
-		#header .logo {
-			-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
-			-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
-			-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
-			transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
-			pointer-events: auto;
-			border-style: solid;
-			border-color: #ffffff;
-			border-width: 5px !important;
-			font-family: "Source Sans Pro", Helvetica, sans-serif;
-			font-size: 2.25rem;
-			font-weight: 900;
-			letter-spacing: 0.075em;
-			line-height: 1;
-			padding: 1rem 1.75rem;
-			text-transform: uppercase;
-			visibility: visible;
-		}
-
-			#header .logo:hover {
-				border-color: #18bfef !important;
-				color: #18bfef !important;
-			}
-
-		@media screen and (max-width: 980px) {
-
-			#header {
-				height: 14rem;
-				padding-bottom: 4rem;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#header {
-				padding-bottom: 3rem;
-			}
-
-				#header .logo {
-					font-size: 1.75rem;
-					border-width: 3px !important;
-				}
-
-		}
+@media screen and (max-width: 736px) {
+	#header {
+		padding-bottom: 3rem;
+	}
+}
 
 /* Nav */
 
