@@ -3292,186 +3292,100 @@ body:not(.is-preload) #nav {
    INTRO LIMPIO (HERO)
 ========================= */
 
+/* =========================
+   INTRO DEFINITIVO (CORREGIDO)
+========================= */
+
 #intro {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-flex-direction: column;
-		-webkit-flex-direction: column;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		min-height: 100vh;
-		width: 100%;
-		position: relative;
-		overflow: hidden;
-		background-color: #000;
-		text-align: center;
-		cursor: default;
-	}
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    text-align: center;
+    padding: 0; /* Evita recortes innecesarios */
+}
 
-		#intro > p {
-			max-width: 40rem;
-			margin-left: auto;
-			margin-right: auto;
-		}
-
-		#intro::before, #intro::after {
-			display: none !important; /* Eliminamos el granulado que ensucia el video */
-		}
-
+/* El Vídeo: Posición absoluta real */
 #bg-video {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: 0;
-		object-fit: cover;
-	}
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1; /* Al fondo */
+    object-fit: cover;
+}
 
-	.intro-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.4);
-		z-index: 1;
-	}
+/* Overlay: Capa intermedia */
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece para que el texto resalte */
+    z-index: 2;
+}
 
-	#intro > h1, 
-	#intro > p, 
-	#intro > .actions {
-		position: relative;
-		z-index: 2; /* Texto por encima del video */
-	}
+/* Contenedores de texto: Por encima de todo */
+#intro h1, 
+#intro p, 
+#intro .actions {
+    position: relative !important;
+    z-index: 3 !important; /* Salta al frente */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #ffffff !important;
+}
 
-/* TEXTOS */
 #intro h1 {
-	font-size: 5rem;
-	line-height: 1;
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    max-width: 90%;
 }
 
 #intro p {
-	font-size: 1.25rem;
-	font-style: italic;
-	margin-top: 0.5rem;
-	text-align: center;
-	opacity: 0.85;
+    font-size: 1.25rem;
+    max-width: 40rem;
+    opacity: 0.9;
 }
 
-/* BOTÓN / FLECHA */
+/* BOTÓN / FLECHA: Centrado absoluto */
 #intro .actions {
-	margin-top: 3rem;
+    margin-top: 3rem;
+    display: flex !important;
+    justify-content: center !important;
+    list-style: none !important;
+    padding: 0 !important;
 }
 
-/* LINKS */
-#intro a {
-	color: #ffffff;
-	border-bottom-color: rgba(255, 255, 255, 0.5);
+#intro .actions li {
+    padding: 0 !important;
 }
 
-#intro a:hover {
-	border-bottom-color: transparent;
-	color: #18bfef !important;
+/* Limpieza de la plantilla original */
+#intro::before, #intro::after {
+    display: none !important;
 }
 
-/* TIPOGRAFÍA GENERAL */
-#intro strong,
-#intro b,
-#intro h1,
-#intro h2,
-#intro h3,
-#intro h4,
-#intro h5,
-#intro h6 {
-	color: #ffffff;
-}
-
-/* ELEMENTOS FORM */
-#intro input,
-#intro select,
-#intro textarea {
-	color: #ffffff;
-}
-
-/* BOTONES */
-#intro input[type="submit"],
-#intro input[type="reset"],
-#intro input[type="button"],
-#intro button,
-#intro .button {
-	background-color: transparent;
-	box-shadow: inset 0 0 0 2px #ffffff;
-	color: #ffffff !important;
-}
-
-#intro input[type="submit"]:hover,
-#intro input[type="reset"]:hover,
-#intro input[type="button"]:hover,
-#intro button:hover,
-#intro .button:hover {
-	box-shadow: inset 0 0 0 2px #18bfef;
-	color: #18bfef !important;
-}
-
-#intro input[type="submit"].primary,
-#intro input[type="reset"].primary,
-#intro input[type="button"].primary,
-#intro button.primary,
-#intro .button.primary {
-	background-color: #ffffff;
-	color: #1e252d !important;
-	box-shadow: none;
-}
-
-#intro input[type="submit"].primary:hover,
-#intro input[type="reset"].primary:hover,
-#intro input[type="button"].primary:hover,
-#intro button.primary:hover,
-#intro .button.primary:hover {
-	background-color: #18bfef;
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 980px) {
-	#intro {
-		padding: 4rem 4rem 2rem 4rem;
-		min-height: 90vh;
-	}
-
-	#intro p br {
-		display: none;
-	}
-}
-
+/* RESPONSIVE AJUSTADO */
 @media screen and (max-width: 736px) {
-	#intro {
-		padding: 3rem 2rem 1rem 2rem;
-		min-height: 80vh;
-	}
-
-	#intro h1 {
-		font-size: 3.25rem;
-		line-height: 1.1;
-		margin-bottom: 1rem;
-	}
-
-	#intro p {
-		font-size: 1rem;
-	}
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+    #intro p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
 }
 
  /* =========================
