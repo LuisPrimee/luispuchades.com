@@ -3946,13 +3946,72 @@ input, select, textarea {
 		}
 
 /* =========================
-   FOOTER COMPACTO
+   FOOTER COMPACTO (FORZADO)
 ========================= */
 
-#footer {
-	padding: 1.5rem 2rem !important;
+body #wrapper #footer {
+	padding: 1rem 2rem !important;
 	margin: 0 auto;
 	max-width: 72rem;
+}
+
+/* CONTENEDOR */
+body #wrapper #footer .footer-row {
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	gap: 12px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* TEXTO */
+body #wrapper #footer .footer-left h3,
+body #wrapper #footer .footer-left p {
+	margin: 0 !important;
+	font-size: 0.8rem;
+	color: #717981 !important;
+}
+
+/* ICONOS */
+body #wrapper #footer .footer-right ul {
+	display: flex !important;
+	gap: 10px !important;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* LINKS */
+body #wrapper #footer a {
+	color: #717981 !important;
+	text-decoration: none !important;
+}
+
+body #wrapper #footer a:hover {
+	color: #18bfef !important;
+}
+
+/* LIMPIEZA DE LA PLANTILLA (CLAVE) */
+body #wrapper #footer > section,
+body #wrapper #footer .split,
+body #wrapper #footer .contact {
+	display: none !important;
+}
+
+/* ELIMINAR ESPACIOS HEREDADOS */
+body #wrapper #footer * {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 736px) {
+	body #wrapper #footer .footer-row {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 8px !important;
+	}
 }
 
 /* CONTENEDOR */
