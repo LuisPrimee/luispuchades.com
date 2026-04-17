@@ -3368,6 +3368,32 @@ body:not(.is-preload) #nav {
     padding: 0 !important;
 }
 
+/* Posicionamiento de la caja de la flecha */
+#intro .actions {
+    position: absolute;   /* Se despega del texto y se mueve libre por el fondo */
+    bottom: 3rem;         /* La pega al borde inferior (ajusta a tu gusto) */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Color de la flecha */
+#intro .button.icon.solid.solo {
+    color: #ffffff !important;         /* Flecha blanca */
+    border-color: #ffffff !important;  /* Círculo/borde blanco */
+    box-shadow: none !important;       /* Quita sombras si existen */
+}
+
+/* Color al pasar el ratón (hover) */
+#intro .button.icon.solid.solo:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
 #intro .actions li {
     padding: 0 !important;
 }
