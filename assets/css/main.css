@@ -3602,7 +3602,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 ========================= */
 #nav {
 	display: flex;
-	background: #ffffff;
+	background: #1e252d;
 	border-bottom: solid 2px #eeeeee;
 	height: 4rem;
 	line-height: 4rem;
