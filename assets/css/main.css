@@ -3598,28 +3598,60 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 /* =========================
-   NAV LIMPIO (SIN SOLAPAMIENTO)
+   NAV
 ========================= */
-
 #nav {
-	color: #ffffff;
 	display: flex;
-	background: rgba(255, 255, 255, 0.175);
+	background: #ffffff;
+	border-bottom: solid 2px #eeeeee;
 	height: 4rem;
 	line-height: 4rem;
-
-	margin: 4rem auto 0 auto; /* antes era -4rem (ERROR CLAVE) */
-
+	margin: 0 auto;
 	overflow: hidden;
-	padding: 0 2rem 0 0;
-	position: relative;
+	padding: 0;
+	position: sticky;
+	top: 0;
 	width: calc(100% - 4rem);
 	max-width: 72rem;
-	z-index: 2;
-
+	z-index: 999;
 	transition: transform 1s ease, opacity 1s ease;
 }
 
+#nav ul.links {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#nav ul.links li a {
+	display: block;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 0.7rem;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	color: #212931;
+	text-decoration: none;
+	border-bottom: none;
+	padding: 0 1.5rem;
+	height: 4rem;
+	line-height: 4rem;
+	transition: color 0.2s ease-in-out;
+}
+
+#nav ul.links li a:hover {
+	color: #18bfef;
+}
+
+#nav ul.links li.active {
+	box-shadow: inset 0 -2px 0 0 #18bfef;
+}
+
+#nav ul.links li.active a {
+	color: #212931;
+}
 
 /* =========================
    MAIN (AJUSTADO)
